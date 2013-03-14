@@ -5,15 +5,15 @@ title:          Portfolio
 description:    A small selection of my most noteworthy work.
 
 css:
-    - /blog/css/portfolio.css
-    - /blog/remooz/ReMooz.css
+    - /css/portfolio.css
+    - /remooz/ReMooz.css
 
 js:
     - http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js
-    - /blog/js/mootools-more.js
-    - /blog/js/appden.js
-    - /blog/js/portfolio.js
-    - /blog/remooz/ReMooz.js
+    - /js/mootools-more.js
+    - /js/appden.js
+    - /js/portfolio.js
+    - /remooz/ReMooz.js
 
 images:         http://ypchen.inwake.com/images/portfolio/
 
@@ -131,11 +131,11 @@ thumbs:
 	
 	{% for thumb in page.thumbs %}
 		<li>
-			<a class="thumb pages-{{ thumb.pages }}" href="{{ page.images }}{{ thumb.id }}/blog/1.jpg">
+			<a class="thumb pages-{{ thumb.pages }}" href="{{ page.images }}{{ thumb.id }}1.jpg">
 				<img src="{{ page.images }}{{ thumb.id }}.jpg" />
 			</a>
 			{% if thumb.url %}
-				<a class="link" target="_blank" href="{{ thumb.url }}/blog/">{{ thumb.title }}</a>
+				<a class="link" target="_blank" href="{{ thumb.url }}">{{ thumb.title }}</a>
 			{% else %}
 				<span class="link">{{ thumb.title }}</span>
 			{% endif %}
@@ -145,10 +145,10 @@ thumbs:
 				<span class="credits">
 					(Credits:
 					{% for credit in thumb.credits %}
-						<a href="{{ credit.url }}/blog/" target="_blank">{{ credit.name }}</a>{% if forloop.last == false %},{% elsif thumb.agencies %}; Agency:{% endif %}
+						<a href="{{ credit.url }}" target="_blank">{{ credit.name }}</a>{% if forloop.last == false %},{% elsif thumb.agencies %}; Agency:{% endif %}
 					{% endfor %}
 					{% for agency in thumb.agencies %}
-						<a href="{{ agency.url }}/blog/" target="_blank">{{ agency.name }}</a>{% if forloop.last %}){% else %},{% endif %}
+						<a href="{{ agency.url }}" target="_blank">{{ agency.name }}</a>{% if forloop.last %}){% else %},{% endif %}
 					{% endfor %}
 				</span>
 			</div>

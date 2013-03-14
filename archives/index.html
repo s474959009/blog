@@ -11,21 +11,21 @@ perPageItem: 100
 		<ul class="posts">
 		{% for post in site.posts limit:page.initItem %}<li class="listing-item">
 			<time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-			<a href="{{site.baseurl}}{{ post.url }}/blog/" title="{{ post.title }}">{{ post.title }}</a>
+			<a href="{{site.baseurl}}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
 		  </li>{% endfor %}
 		</ul>
 		
 		<div id="post-bottom">
 			<p style="text-align:right" class="more">
-				<a href="{{site.baseurl}}/blog/">返回主页</a>
+				<a href="{{site.baseurl}}/">返回主页</a>
 			</p>
 		</div>
 	</article>
 </section>
 
 {% if site.posts.size > page.initItem %}
-<script src="/blog/js/jquery-1.7.1.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/blog/js/waypoints.min.js" type="text/javascript"></script>
+<script src="/js/jquery-1.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/waypoints.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(document).ready(function() {
 	// 关于waypoint，请看 http://imakewebthings.com/jquery-waypoints/

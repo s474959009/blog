@@ -1,7 +1,7 @@
 <script type="text/javascript">
 	
 		function showTag(tagStr){
-			jq.getJSON("/blog/../post.json",function(data){				
+			jq.getJSON("../post.json",function(data){				
 				jq('#show-tag').empty(content);				
 				var content ="<h2>分类："+ tagStr +"</h2><ul class=\"posts\">";
 				var count = 0;

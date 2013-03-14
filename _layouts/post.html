@@ -5,12 +5,12 @@ layout: default
 	
 	<article class="posts">
 		<h2 class="title">{{ page.title }}</h2>
-		<time class="emphnext" style="color:gray;" title="{{ page.date | date_to_xmlschema }}/blog/" pubdate="{{ page.date | date_to_xmlschema }}/blog/">{{ page.date | date: '%B %d, %Y' }}</time>		
+		<time class="emphnext" style="color:gray;" title="{{ page.date | date_to_xmlschema }}" pubdate="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }}</time>		
 		{% if page.tags != empty %}
 		<ul class="tags emphnext">
 			<li>标签：</li>
 			{% for tag in page.tags %}
-				<li><a href="{{ site.baseurl }}/blog/tags/?tag={{tag | cgi}}">{{ tag }}</a>{% if forloop.last == false %}, {%endif %}</li>
+				<li><a href="{{ site.baseurl }}/tags/?tag={{tag | cgi}}">{{ tag }}</a>{% if forloop.last == false %}, {%endif %}</li>
 			{% endfor %}
 		</ul>
 		{% endif %}
@@ -28,7 +28,7 @@ layout: default
 				<a class="jiathis_counter_style"></a>
 				
 				<span class="more right">
-				<a href="{{site.baseurl}}/blog/">返回主页</a>
+				<a href="{{site.baseurl}}/">返回主页</a>
 				</span>
 			</div>
 			<!-- JiaThis Button END -->	
@@ -40,9 +40,9 @@ layout: default
 
 		<a class="left" href="{{ site.baseurl }}{{page.previous.url}}" title="前一篇：{{page.previous.title}}">&laquo; {{page.previous.title}}</a>
 			{% endif %}			
-		<a href="{{ site.baseurl }}/blog/archives/">文章列表</a>
+		<a href="{{ site.baseurl }}/archives/">文章列表</a>
 			{% if page.next.url %}
-				<a class="right" href="{{ site.baseurl }}{{page.next.url}}/blog/" title="后一篇：{{page.next.title}}">{{page.next.title}} &raquo;</a>
+				<a class="right" href="{{ site.baseurl }}{{page.next.url}}" title="后一篇：{{page.next.title}}">{{page.next.title}} &raquo;</a>
 			{% endif %}
 	</nav>
 {% if page.comment %}
