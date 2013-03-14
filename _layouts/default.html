@@ -10,9 +10,9 @@
 		<!--[if lt IE 9]>
 			<script src="{{site.baseurl}}/js/html5.js" type="text/javascript"></script>	 
         <![endif]--> 
-		{% for css in site.css %}<link rel="stylesheet" href="{{site.baseurl}}{{ css }}/blog/" type="text/css" />
+		{% for css in site.css %}<link rel="stylesheet" href="{{site.baseurl}}{{ css }}" type="text/css" />
 		{% endfor %}	
-		{% for css in page.css %}<link rel="stylesheet" href="{{site.baseurl}}{{ css }}/blog/" type="text/css" />
+		{% for css in page.css %}<link rel="stylesheet" href="{{site.baseurl}}{{ css }}" type="text/css" />
 		{% endfor %}
 		<script src="/blog/js/scrolltop.js" type="text/javascript" charset="utf-8"></script>		
 		{% unless page.title %}
