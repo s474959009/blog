@@ -4,7 +4,7 @@ layout: index
 
 
 <article id="index">
-    <h2>Recent article</h2>
+    <h2>近期文章</h2>
     
         {% for post in site.posts limit:4 %}
 			<div>
@@ -24,11 +24,11 @@ layout: index
 					{% else %}
 						<p>{{ post.content | strip_html | truncatewords: 2 }}</p>
 					{% endif %}
-				<p style="text-align:right"><span class="more"><a  href="{{site.baseurl}}{{ post.url }}/blog/">Read more...</a></span></p>
+				<p style="text-align:right"><span class="more"><a  href="{{site.baseurl}}{{ post.url }}/blog/">阅读全文...</a></span></p>
 				</div>
 			</div>
         {% endfor %}
   
-    <center><a href="{{ site.baseurl }}/blog/archives">Article list</a></center>
+    <div class="pagination"><a href="{{ site.baseurl }}/blog/archives">文章列表</a></div>
 </article>
 

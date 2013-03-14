@@ -1,11 +1,11 @@
 {% if site.disqus_short_name and page.comments != false %}
 <script type="text/javascript">
-      var disqus_shortname = '{{ site.disqus_short_name }}';
+      var disqus_shortname = '{{ site.disqus_short_name }}/blog/';
 
         {% comment %} `page.comments` can be only be set to true on pages/posts, so we embed the comments here. {% endcomment %}
         // var disqus_developer = 1;
-        var disqus_identifier = '{{site.meta.absolute_baseurl }}{{ page.url }}';
-        var disqus_url = '{{ site.meta.absolute_baseurl }}{{ page.url }}';
+        var disqus_identifier = '{{site.meta.absolute_baseurl }}{{ page.url }}/blog/';
+        var disqus_url = '{{ site.meta.absolute_baseurl }}{{ page.url }}/blog/';
         var disqus_script = 'embed.js';
 
     (function () {
@@ -13,5 +13,4 @@
       dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
-</script>
-{% endif %}
+</script>{% endif %}

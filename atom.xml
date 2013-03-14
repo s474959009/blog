@@ -5,7 +5,7 @@ layout: nil
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>{{ site.meta.site_title }}</title>
     <link href="{{ site.meta.absolute_baseurl }}/blog/atom.xml" rel="self"/>
-    <link href="{{ site.meta.absolute_baseurl }}/blog/">
+    <link href="{{ site.meta.absolute_baseurl }}/blog/"/>
     <updated>{{ site.time | date_to_xmlschema }}</updated>
     <id>{{ site.meta.base_url }}</id>
     <author>
@@ -16,7 +16,7 @@ layout: nil
 
     <entry>
         <title>{{ post.title }}</title>
-        <link href="{{ site.meta.absolute_baseurl }}{{ post.url }}/blog"/>
+        <link href="{{ site.meta.absolute_baseurl }}{{ post.url }}/blog/"/>
         <updated>{{ post.date | date_to_xmlschema }}</updated>
         <id>{{ site.meta.absolute_baseurl }}{{ post.id }}</id>
         <content type="html">{{ post.content | xml_escape }}</content>

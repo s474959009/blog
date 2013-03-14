@@ -1,32 +1,24 @@
 ---
 layout: default
 ---
-
-
-
 <section class="content">
-
+	
 	<article class="posts">
 		<h2 class="title">{{ page.title }}</h2>
-		<time class="emphnext" style="color:gray;" title="{{ page.date | date_to_xmlschema }}/blog/" pubdate="{{ page.date | date_to_xmlschema }}/blog/">{{ page.date | date: '%B %d, %Y' }}</time>
-		
+		<time class="emphnext" style="color:gray;" title="{{ page.date | date_to_xmlschema }}/blog/" pubdate="{{ page.date | date_to_xmlschema }}/blog/">{{ page.date | date: '%B %d, %Y' }}</time>		
 		{% if page.tags != empty %}
 		<ul class="tags emphnext">
-			<li>Tag：</li>
+			<li>标签：</li>
 			{% for tag in page.tags %}
-				<li><a href="{{ site.baseurl }}/tags#{{tag | replace:' ', '-' | downcase }}/blog/">{{ tag }}</a>{% if forloop.last == false %}, {%endif %}</li>
+				<li><a href="{{ site.baseurl }}/blog/tags/?tag={{tag | cgi}}">{{ tag }}</a>{% if forloop.last == false %}, {%endif %}</li>
 			{% endfor %}
 		</ul>
-		{% endif %}	
-
+		{% endif %}
 		{{ content }}	
-
-
-	
 		<div id="post-bottom">
 			<!-- JiaThis Button BEGIN -->
 			<div id="ckepop">
-				<span class="jiathis_txt">share：</span>
+				<span class="jiathis_txt">分享到：</span>
 				<a class="jiathis_button_qzone"></a>
 				<a class="jiathis_button_tsina"></a>
 				<a class="jiathis_button_tqq"></a>
@@ -36,51 +28,29 @@ layout: default
 				<a class="jiathis_counter_style"></a>
 				
 				<span class="more right">
-				<a href="{{site.baseurl}}/blog/">back to home</a>
+				<a href="{{site.baseurl}}/blog/">返回主页</a>
 				</span>
 			</div>
 			<!-- JiaThis Button END -->	
-
-		</div>
-	
+		</div>	
 	</article>
 
 	<nav class="page-navigation">
-		<ul>
-			{% if page.previous.url %}
-			<li class="left">
-				<a href="{{ site.baseurl }}{{page.previous.url}}/blog/" title="pre：{{page.previous.title}}">&laquo; {{page.previous.title}}</a>
-			</li>
-			{% endif %}
-			
-			<li class="center"><a href="{{ site.baseurl }}/blog/archives/">list</a></li>
-			
+		{% if page.previous.url %}
+
+		<a class="left" href="{{ site.baseurl }}{{page.previous.url}}" title="前一篇：{{page.previous.title}}">&laquo; {{page.previous.title}}</a>
+			{% endif %}			
+		<a href="{{ site.baseurl }}/blog/archives/">文章列表</a>
 			{% if page.next.url %}
-			<li class="right">
-				<a href="{{ site.baseurl }}{{page.next.url}}/blog/" title="next：{{page.next.title}}">{{page.next.title}} &raquo;</a>
-			</li>
+				<a class="right" href="{{ site.baseurl }}{{page.next.url}}/blog/" title="后一篇：{{page.next.title}}">{{page.next.title}} &raquo;</a>
 			{% endif %}
-		</ul>
 	</nav>
-
-	{% if page.comment %}
-
-{% comment %}
-
-	<section class="comments" id="comments">
-		 <div id="disqus_thread" aria-live="polite"></div>
-		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">Comments powered by Disqus.</a>
-		</noscript>
-
-		
-	</section>
-{% endcomment %}
-
+{% if page.comment %}
 <section class="comments" id="comments">
 	<!-- Duoshuo Comment BEGIN -->
 	<div class="ds-thread"></div>
 	<script type="text/javascript">
-	var duoshuoQuery = {short_name: "ODM"};
+	var duoshuoQuery = {short_name: "ypchen"};
 	(function() {
 		var ds = document.createElement('script');
 		ds.type = 'text/javascript';ds.async = true;
@@ -90,7 +60,5 @@ layout: default
 	</script>
 <!-- Duoshuo Comment END -->
 </section>
-
-	{% endif %}
-
+{% endif %}
 </section>

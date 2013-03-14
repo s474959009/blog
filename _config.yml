@@ -1,12 +1,15 @@
 meta:
-    site_title: "Sun's Blog"
-    site_subtitle: "To study hard..."
-    site_language: "en"
+    site_title: "lorazepam的博客"
+    site_subtitle: "·。°·。°I'm a fake"
+    site_language: "zh-cn"
+    absolute_baseurl: http://www.zzu123.com
     author:
-        full_name:4
-        short_name: O
-        name: O
+        full_name:Sun Zhaolong
+        short_name: zlsun
+        name: zlsun
         email: naneitou@qq.com
+
+url: http://www.zzu123.com
 
 #baseurl: /base
 
@@ -25,7 +28,8 @@ permalink: /blog/:year/:month/:day/:title
 
 disqus_short_name: ypchenstory
 
-lsi: false
-
+      
+css:
+    - /blog/css/screen.css
 
 

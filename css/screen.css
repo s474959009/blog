@@ -73,8 +73,10 @@ margin:2px;
 }
 
 section.site > section.content {
+position: relative;
 margin:1.5em 0 1em;
 width:50em;
+overflow: auto;
 }
 
 section.site > section.content > article > blockquote {
@@ -124,45 +126,31 @@ padding:1.5em 2em;
 
 section.site > section.content nav.page-navigation {
 background-color:#162e41;
+text-align: center;
 margin:1em 0;
 min-height:2em;
 padding:.25em;
 position:relative;
 }
 
-section.site > section.content nav.page-navigation ul li {
-max-width:60%;
-overflow:hidden;
-position:absolute;
-text-overflow:ellipsis;
-white-space:nowrap;
-}
 
-section.site > section.content nav.page-navigation ul li a {
+section.site > section.content nav.page-navigation  a {
 border-bottom:1px dashed #666;
 color:#DDD;
 font:12px tahoma;
 padding:.25em;
 }
 
-section.site > section.content nav.page-navigation ul li a:hover {
+section.site > section.content nav.page-navigation  a:hover {
 border-bottom:1px dashed #BFEFFF;
 color:#C0FF3E;
 font:12px tahoma;
 padding:.25em;
 }
 
-section.site > section.content nav.page-navigation ul li.center {
-left:23em;
-}
+a.left {float:left}
 
-section.site > section.content nav.page-navigation ul li.left {
-left:.75em;
-}
-
-section.site > section.content nav.page-navigation ul li.right {
-right:.75em;
-}
+a.right {float:right}
 
 aside.sidebar {
 background-color:#528B8B;
@@ -206,6 +194,7 @@ aside.sidebar section img.block {
 border:1px solid #666;
 display:block;
 margin:1em auto;
+width:70%;
 }
 
 aside.sidebar section ul > li,#comments.archived-comments > ul.comments {
@@ -228,6 +217,11 @@ text-align:center;
 
 article#index h2,article.notice h2,.listing-seperator {
 	font-weight:700;
+}
+
+article#index{
+position: relative;
+overflow: auto;
 }
 
 #post-bottom {
@@ -426,6 +420,9 @@ section.content article p.excerpt {
 text-indent:0;
 }
 
+section.content article p.noindent{
+	text-indent:0;
+}
 
 
 span#poweredby {
@@ -473,15 +470,19 @@ font-size:80%;
 border-bottom:0;
 }
 
+
 #goTopBtn {
-	position: fixed; text-align: center; line-height: 30px; width: 30px; bottom: 35px; height: 33px; font-size: 12px; cursor: pointer; right: 40px; _position: absolute; _right: auto
+  position: fixed; _position:absolute; _top:expression(document.documentElement.clientHeight + document.documentElement.scrollTop - this.offsetHeight); TEXT-ALIGN: center; LINE-HEIGHT: 50px; WIDTH: 50px; HEIGHT: 50px; FONT-SIZE: 12px; CURSOR: pointer; left:52%; bottom:0; margin-left: 480px;
+}
+
+#goTopBtn a{
+	border:none;
 }
 
 img{
-	border:0px;
+	box-shadow:0 4px 4px rgba(0,0,0,0.3);
 	-webkit-box-shadow:0 4px 4px rgba(0,0,0,0.3);
 	-moz-box-shadow:0 4px 4px rgba(0,0,0,0.3);
-	-box-shadow:0 4px 4px rgba(0,0,0,0.3);
 }
 
 a[title*="大图"]{
@@ -525,5 +526,16 @@ section.content article > time.emphnext + p{
 }
 /* @end */
 
+ul#thumbs{
+    list-style: none outside none;
+	display:block;
+}
 
+#show-tag{height: auto !important;_height:300px;min-height:300px;_overflow: visible;}
+#show-tag span{font-weight: normal;font-size:14px;color:#808080}
 
+.pagination{
+	text-align: center;
+	margin: 1em 0px;
+	position: relative;
+}
