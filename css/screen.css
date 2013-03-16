@@ -546,7 +546,6 @@ img.maruku-png { }
 	border:1px solid #4C964D;
 	color:#FFF;
 }
-#page .weibo {
-	position：absolute;
-	float: left;
+.weibo {
+	right:300px;
 
