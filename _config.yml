@@ -14,3 +14,11 @@ author :
   
 BASE_PATH : false
 ASSET_PATH : false
+analytics :
+   provider : google 
+   google : 
+       tracking_id : 'UA-31769544-1'
+   getclicky :
+     site_id : 
+   mixpanel :
+       token : '_MIXPANEL_TOKEN_'
