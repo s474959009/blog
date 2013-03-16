@@ -3,3 +3,13 @@ archive_path: /archive.html
 categories_path : /categories.html
 tags_path : /tags.html
 index_path : /index.html
+
+title : "lorazepam blog"
+tagline: Site Tagline
+author :  
+  name : lorazepam
+  email : naneitou@gmail.com
+  github : s474959009
+  
+BASE_PATH : false
+ASSET_PATH : false
