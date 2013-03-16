@@ -2,6 +2,7 @@
 layout: default
 title: 我的Blog
 ---
+{% include weibo.html %}
 　　<h2>{{ page.title }}</h2>
 　　<p>最新文章</p>
 　　<ul>
@@ -9,5 +10,4 @@ title: 我的Blog
 　　　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
 　　　　{% endfor %}
 　　</ul>
-{% include weibo.html %}
 {% include JB/setup %}
