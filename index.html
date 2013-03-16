@@ -3,9 +3,9 @@ layout: page
 title: 我的Blog
 tagline: Supporting tagline
 ---
-<div>
+
 {% include weibo.html %}
-　　<div>
+
 <h2>{{ page.title }}</h2>
 　　<p>最新文章</p>
 　　<ul>
@@ -13,6 +13,4 @@ tagline: Supporting tagline
 　　　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
 　　　　{% endfor %}
 　　</ul>
-</div>
-</div>
 {% include JB/setup %}
