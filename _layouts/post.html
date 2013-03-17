@@ -1,5 +1,5 @@
 ---
-title: 文章
+title: {{ page.title }}
 layout: default
 ---
 <div id="page">
@@ -16,10 +16,10 @@ layout: default
   
   <div class="prev-next">
   {% if page.next %}
-    <a href="{{ page.next.url }}" class="next" title="{{ page.next.title }}">下一篇 &rarr;</a>
+    <a href="{{ site.baseurl }}{{ page.next.url }}" class="next" title="{{ page.next.title }}">&larr; 上一篇</a>
   {% endif %}
   {% if page.previous %}
-    <a href="{{ site.baseurl }}{{ page.previous.url }}" class="prev" title="{{ page.previous.title }}">&larr; 上一篇</a>
+    <a href="{{ site.baseurl }}{{ page.previous.url }}" class="prev" title="{{ page.previous.title }}">下一篇 &rarr;</a>
   {% endif %}
   </div>
   
