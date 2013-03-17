@@ -13,7 +13,7 @@ author :
   github : s474959009
   
 BASE_PATH : false
-ASSET_PATH : false
+ASSET_PATH : true
 analytics :
    provider : google 
    google : 
