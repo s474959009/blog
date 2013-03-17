@@ -17,8 +17,8 @@
 	{% endif %}
 
    <!-- syntax highlighting CSS -->
-   {% css in syntax.css%}<link rel="stylesheet" href="{{site.baseurl}}{{ css }}" type="text/css" />
-	{% css in screen.css %}<link rel="stylesheet" href="{{site.baseurl}}{{ css }}" type="text/css" />
+   {% for css in screen.css%}<link rel="stylesheet" href="{{site.baseurl}}{{ css }}" type="text/css" />{%endfor%}
+	{% for css in syntax.css %}<link rel="stylesheet" href="{{site.baseurl}}{{ css }}" type="text/css" />{%endfor%}
    <!-- Homepage CSS -->
    <link rel="stylesheet" href="/css/screen.css" type="text/css" />
 <script type="text/javascript"
