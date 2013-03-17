@@ -3,6 +3,11 @@ layout: page
 tagline: Supporting tagline
 ---
 <p>本博客是基于 Jekyll Bootstrap 创建的，具体的创建方法请查看Jekyll Quick Start。 这里有关于Jekyll Bootstrap的完整资料。博客的主题是Fork自Mark Reid创建的mark-reid主题。博客中数学公式的显示得益于MathJax，评论系统采用的是DISQUS，语法高亮取自google-code-prettify。</p>
+<p>YAML是 Jekyll 的一个重要组成部分。 YAML 是一种直观的能够被电脑识别的的数据数据序列化格式，他并且容易被人类阅读，容易和脚本语言交互的。
+
+用我自己的理解，我将它理解为一些可自定义的 "钩子"，在 Jekyll 博客中的文件头部的一个 "区块" 。使用在 _confiy.yml 配置文件中，在每一篇 post 中，在每一个静态页面中。
+
+例如下面的代码片段：</p>
 <h2>最新文章</h2>
 <ul>
 　　　　{% for post in site.posts %}
