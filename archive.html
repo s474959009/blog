@@ -1,10 +1,10 @@
 ---
 layout: page
-title : 文章
+title : page.title
 header : Post Archive
 group: navigation
 ---
 {% include JB/setup %}
-
+<h1 class="emphnext">{{ page.title }}</h1>
 {% assign posts_collate = site.posts %}
 {% include JB/posts_collate %}
