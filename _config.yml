@@ -1,4 +1,3 @@
-permalink: /:year/:month/:day/:title.html
 baseurl: /blog
 archive_path: /archive.html
 categories_path : /categories.html
