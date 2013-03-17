@@ -1,4 +1,5 @@
 ---
+title: 文章
 layout: default
 ---
 <div id="page">
@@ -14,7 +15,7 @@ layout: default
   <address class="signature">
     <a class="author" href="{{ site.baseurl }}">{{ site.author.name }}</a> 
     <span class="date">{{ page.date | date_to_long_string }}</span>
-    <span class="location"></span>
+    <span class="location">{{ site.baseurl }}{{ post.url }}</span>
   </address>
   
   <div class="prev-next">
@@ -41,3 +42,4 @@ var duoshuoQuery = {short_name:"zlsun"};
 	})();
 	</script>
 <!-- Duoshuo Comment END -->
+{% include JB/comments %}
