@@ -1,5 +1,4 @@
 permalink: /:year/:month/:day/:title.html
-baseurl: /blog/
 archive_path: /archive.html
 categories_path : /categories.html
 tags_path : /tags.html
@@ -13,7 +12,7 @@ author :
   github : s474959009
   
 BASE_PATH : false
-ASSET_PATH : true
+ASSET_PATH : false
 analytics :
    provider : google 
    google : 
