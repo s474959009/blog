@@ -549,6 +549,5 @@ img.maruku-png { }
 
 #weibo {
 	float:right;
-	right:-20px;
-	height:-20px;
+	margin:0px 0px 0px 5px;
 	}
