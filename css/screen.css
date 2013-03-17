@@ -548,6 +548,6 @@ img.maruku-png { }
 }
 
  .weibo {
-	float:left;
-	position: absolute;
+	left:10px;
+	height:10px;
 	}
