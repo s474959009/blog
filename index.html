@@ -8,10 +8,10 @@ tagline: Supporting tagline
 用我自己的理解，我将它理解为一些可自定义的 "钩子"，在 Jekyll 博客中的文件头部的一个 "区块" 。使用在 _confiy.yml 配置文件中，在每一篇 post 中，在每一个静态页面中。
 
 例如下面的代码片段：</p>
-<h2>最新文章</h2>
+<h2 id='sample_posts'>>最新文章</h2>
 <ul>
 　　　　{% for post in site.posts %}
-　　　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+　　　　　　<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
 　　　　{% endfor %}
 　　</ul>
 {% include JB/setup %}
