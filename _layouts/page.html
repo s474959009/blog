@@ -3,11 +3,11 @@ layout: default
 group: navigation
 ---
 <div id="page">
+<div>
 {% unless page.title %}
 {% include weibo.html %}
 {% endunless %}
 <h1 class="emphnext">{{ page.title }}</h1>
-<div>
-{{ content }}
 </div>
+{{ content }}
 </div>
