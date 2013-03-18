@@ -84,7 +84,10 @@ sup { line-height: 1ex; }
 	-moz-box-shadow: 2px 2px 8px #aaa;	
 }
 
-#ds-thread { padding-top: 20px; }
+#ds-thread { padding-top: 0px;
+	margin-top:20px;
+
+ }
 
 /* TODO
 #page { counter-reset: section; }
