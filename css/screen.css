@@ -554,5 +554,5 @@ img.maruku-png { }
 	float:right;
 	margin-left: 10px;
 	}
-#gotop{ width:25px; height:65px; position:absolute; right:-30px;}
+#gotop{ width:25px; height:65px; position:absolute; right:10px;}
 #gotop a{ display:block; cursor:pointer; outline:none;}
