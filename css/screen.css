@@ -550,18 +550,15 @@ img.maruku-png { }
 	color:#FFF;
 }
 
+#goTopBtn {
+  position: fixed; _position:absolute; _top:expression(document.documentElement.clientHeight + document.documentElement.scrollTop - this.offsetHeight); TEXT-ALIGN: center; LINE-HEIGHT: 50px; WIDTH: 50px; HEIGHT: 50px; FONT-SIZE: 12px; CURSOR: pointer; left:52%; bottom:0; margin-left: 480px;
+}
+
+#goTopBtn a{
+	border:none;
+}
+
 #weibo {
 	float:right;
 	margin-left: 10px;
 	}
-#goTopBtn {
-	POSITION: fixed;
-	TEXT-ALIGN: center;
-	LINE-HEIGHT: 30px;
-	WIDTH: 30px;
-	BOTTOM: 35px FONT-SIZE: 12px;
-	CURSOR: pointer;
-	RIGHT: 0px;
-	_position: absolute;
-	_right: auto;
-}
