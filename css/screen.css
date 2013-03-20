@@ -555,6 +555,5 @@ img.maruku-png { }
 	margin-left: 10px;
 	}
 #gotop {
-	background-image:url(/images/gotop.png);
-
+	background-image:url(blog/images/gotop.png);
 }
