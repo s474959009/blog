@@ -1,4 +1,3 @@
-view source
 BackTop=function(btnId){
 var btn=document.getElementById(btnId);
 var d=document.documentElement;
